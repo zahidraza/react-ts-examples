@@ -1,9 +1,9 @@
 import Hello from '../components/Hello';
 import * as actions from '../actions/';
-import { StoreState } from '../types/index';
+import { EnthusiamState } from '../types/index';
 import { connect, Dispatch } from 'react-redux';
 
-// export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
+// export function mapStateToProps({ enthusiasmLevel, languageName }: EnthusiamState) {
 //   return {
 //     enthusiasmLevel,
 //     name: languageName,
@@ -17,7 +17,7 @@ import { connect, Dispatch } from 'react-redux';
 //   };
 // }
 
-const mapStateToProps = ({enthusiasmLevel, languageName}: StoreState) => ({enthusiasmLevel, name: languageName});
+const mapStateToProps = ({enthusiasmLevel, languageName}: EnthusiamState) => ({enthusiasmLevel, name: languageName});
 
 const mapDispatchToProps = (dispatch: Dispatch<actions.EnthusiasmAction>) => ({
   onIncrement: () => dispatch(actions.incrementEnthusiasm()),
